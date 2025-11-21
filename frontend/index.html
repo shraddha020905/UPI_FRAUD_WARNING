@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Fraud Warning Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>UPI Fraud Warning Assistant</h1>
+
+        <!-- ============================= -->
+        <!-- 🏠 HOME PAGE -->
+        <!-- ============================= -->
+        <div id="homePage">
+            <button class="big-btn" onclick="showSMSChecker()">SMS Checker</button>
+            <button class="big-btn" onclick="showTransactionChecker()">Transaction Checker</button>
+        </div>
+
+        <!-- ============================= -->
+        <!-- 📩 SMS CHECKER PAGE -->
+        <!-- ============================= -->
+        <div id="smsPage" class="hidden">
+            <h2>SMS Fraud Checker</h2>
+
+            <textarea id="sms_text" placeholder="Enter SMS text here..." autocomplete="off"></textarea>
+
+            <button onclick="checkSMS()">Check SMS</button>
+            <button class="back-btn" onclick="goHome()">⬅ Back</button>
+
+            <div id="sms_result"></div>
+        </div>
+
+        <!-- ============================= -->
+        <!-- 💸 TRANSACTION CHECKER PAGE -->
+        <!-- ============================= -->
+        <div id="transactionPage" class="hidden">
+            <h2>Transaction Fraud Checker</h2>
+
+            <form id="transactionForm">
+
+                <label>User ID:</label>
+                <input type="text" id="user_id" required autocomplete="off">
+
+                <label>Payee Name:</label>
+                <input type="text" id="payee_name" required autocomplete="off">
+
+                <label>Payee VPA:</label>
+                <input type="text" id="payee_vpa" autocomplete="off">
+
+                <label>Amount:</label>
+                <input type="number" id="amount" required autocomplete="off" min="1">
+
+                <label>Timestamp:</label>
+                <input type="datetime-local" id="timestamp" required>
+
+                <button type="submit" id="checkRiskBtn">Check Risk</button>
+                <button type="button" class="back-btn" onclick="goHome()">⬅ Back</button>
+
+            </form>
+
+            <!-- Loader -->
+            <div id="loader" class="loader hidden"></div>
+
+            <!-- Result Section -->
+            <div id="result" class="result-card hidden">
+
+                <h3 id="risk-title"></h3>
+                <p id="risk-level-display"></p>
+
+                <div id="risk-meter" class="meter">
+                    <div id="risk-fill"></div>
+                </div>
+
+                <p id="risk-reasons"></p>
+                <ul id="reasons"></ul>
+
+                <div id="tips" class="tips"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>

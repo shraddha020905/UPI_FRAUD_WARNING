@@ -1,0 +1,163 @@
+/* ==============================
+   GENERAL STYLES
+============================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ==============================
+   BUTTONS
+============================== */
+.big-btn, button {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.big-btn:hover, button:hover {
+    background: #0056b3;
+}
+
+.back-btn {
+    background: #6c757d;
+}
+
+.back-btn:hover {
+    background: #495057;
+}
+
+/* ==============================
+   FORM ELEMENTS
+============================== */
+input[type="text"], input[type="number"], input[type="datetime-local"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* ==============================
+   RESULT CARDS
+============================== */
+.result-card, #sms_result {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+#sms_result {
+    min-height: 80px;
+}
+
+/* ==============================
+   RISK METER
+============================== */
+.meter {
+    height: 20px;
+    width: 100%;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0 15px 0;
+}
+
+#risk-fill {
+    height: 100%;
+    width: 0;
+    background-color: #4CAF50;
+    transition: width 0.5s ease, background-color 0.5s ease;
+    border-radius: 10px;
+}
+
+/* ==============================
+   LOADER
+============================== */
+.loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #007bff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ==============================
+   TIPS
+============================== */
+.tips {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+    background: #e9f7ef;
+    padding: 12px;
+    border-left: 5px solid #28a745;
+    border-radius: 8px;
+}
+
+/* ==============================
+   MOBILE RESPONSIVE
+============================== */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .big-btn, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

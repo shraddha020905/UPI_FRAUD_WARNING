@@ -1,0 +1,6 @@
+user_id,payee_name,payee_vpa,amount,timestamp,label
+u001,Paytm Mall,paytm@upi,499,2025-11-01 12:00,0
+u002,Unknown,unknown@upi,2000,2025-11-02 15:30,1
+u003,Amazon,amazon@upi,1200,2025-11-03 10:20,0
+u004,Tech Support,support@upi,1500,2025-11-04 09:45,1
+u005,Grocery Shop,grocery@upi,250,2025-11-05 18:00,0
